@@ -6,15 +6,13 @@
 
 ### DESARROLLO
 
-En esta sesión aprendimos qué es Gradle y cómo podemos utilizarlo para automatizar procesos como compilación y ejecución
-de proyectos. Una parte fundamental son los plugins que nos ayudarán a extender el potencial de Gradle en nuestros 
-proyectos.
+En esta sesión aprendimos qué es Gradle y cómo podemos utilizarlo para automatizar algunos procesos como compilación y ejecución
+de proyectos. Vamos a realizar un ejemplo empleando el [Gradle Markdown Plugin](https://github.com/kordamp/markdown-gradle-plugin).
 
+### PASOS
 
-**Asegúrate de comprender:**
-
-1. Se creo un archivo de configuración de Gradle 'build.gradle' como indica la documentación del plugin 
-[Gradle Markdown Plugin](https://github.com/kordamp/markdown-gradle-plugin).
+1. Se creo un archivo de configuración de Gradle 'build.gradle' como indica la documentación del
+[plugin](https://github.com/kordamp/markdown-gradle-plugin).
 
 ```
    
@@ -36,9 +34,10 @@ plugins {
 
 ```
 
-4. Se colocan todos los archivos a convertir en los siguientes folders:
-   - <*.html> en el folder *src/html*
-   - <*.md>   en el folder *src/markdown*
+
+3. Se colocan todos los archivos a convertir en los siguientes folders:
+   - *html* 's o archivos con terminación <*.html> van en el folder *src/html*
+   - *markdown* 's o archivos terminados <*.md>   van en el folder *src/markdown*
 
    
 4. Ejecutan los comandos:
