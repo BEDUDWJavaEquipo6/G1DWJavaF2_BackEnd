@@ -141,7 +141,7 @@ replay_pid*
 ### Gradle ###
 .gradle
 #/build/
-**/build/
+#**/build/
 !src/**/build/
 
 # Ignore Gradle GUI config
@@ -173,7 +173,7 @@ gradle-app.setting
 #Del Repo de Expert
 .vscode/
 **/*/.gradle
-**/*/build
+#**/*/build
 **/*/.DS_Store
 
 **/*/gradle/**
