@@ -50,6 +50,6 @@ plugins {
 
 **Todos los archivos se convertiran en BULK o grupo**
 
-[**`Siguiente`** -> sesión 02](../../Sesion-02/)
+[**`Siguiente`** -> sesión 02](../Sesion-02/)
 
 [**`Regresar`**](../)
