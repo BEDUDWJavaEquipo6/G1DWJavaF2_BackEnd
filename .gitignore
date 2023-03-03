@@ -1,3 +1,14 @@
+#Del Repo de Expert
+.vscode/
+**/*/.gradle
+#**/*/build
+**/*/.DS_Store
+
+**/*/gradle/**
+**/*/gradlew
+**/*/.gradlew.bat
+**/*/.idea/**
+
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -169,14 +180,3 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle,java,intellij+all,visualstudiocode
-
-#Del Repo de Expert
-.vscode/
-**/*/.gradle
-#**/*/build
-**/*/.DS_Store
-
-**/*/gradle/**
-**/*/gradlew
-**/*/.gradlew.bat
-**/*/.idea/**
