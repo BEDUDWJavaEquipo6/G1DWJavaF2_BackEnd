@@ -17,8 +17,8 @@ Equipo 6
 ### Contenido
 
 * [1: Compilación de markdown](postwork1/)
-* [2: Patrón Decorador]()
-* [3: Pruebas dinámicas]()
+* ~~[2: Patrón Decorador]()~~
+* ~~[3: Pruebas dinámicas]()~~
 * [4: Aplicación de línea de comandos](postwork4/)
 * ~~5: Inversión de Control (IoC) en Spring Boot~~
 * ~~6: Introducción a Spring MVC~~
