@@ -7,11 +7,11 @@ Equipo 6
 
 ### Integrantes:
 
-* Melina 
+* Melina Molina
 * Roxana Hernández
 * José Puente
 * Rodrigo Aguilar
-* José Angel C
+* José Angel Córdoba
 * Francisco Gómez 
 
 ### Contenido
