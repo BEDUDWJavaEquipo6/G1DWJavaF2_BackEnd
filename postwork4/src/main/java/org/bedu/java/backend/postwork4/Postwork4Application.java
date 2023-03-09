@@ -14,6 +14,29 @@ public class Postwork4Application implements CommandLineRunner{
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Here the command line runner is running inside the spring boot ,,..//");
+		Scanner reader = new Scanner(System.in);
+
+		System.out.println("Introduce el nombre: ");
+		String nombre = reader.nextLine();
+
+		System.out.println("Introduce el apellido: ");
+		String apellido = reader.nextLine();
+
+		System.out.println("Introduce el teléfono: ");
+		String telefono = reader.nextLine();
+
+		System.out.println("Introduce la edad: ");
+		int edad = reader.nextLine();
+
+		System.out.println("Introduce direccion: ");
+		String direccion = reader.nextLine();
+
+		System.out.println("Introduce el correo electronico: ");
+		String email = reader.nextLine();
+
+
+		Persona persona = new Persona(nombre, telefono);
+
+		System.out.println(persona);
 	}
 }
