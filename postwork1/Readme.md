@@ -51,6 +51,6 @@ plugins {
 
 **Todos los archivos se convertiran en BULK o grupo**
 
-[**`Siguiente`** -> postwork](../postwork2/)
+[**`Siguiente`** -> postwork](../postwork1/)
 
 [**`Regresar`**](../)
