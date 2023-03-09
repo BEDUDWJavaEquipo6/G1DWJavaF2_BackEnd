@@ -7,7 +7,7 @@ public class Cobertura extends HeladoDecorator{
     }
     @Override
     public String producto(){
-        return helado.producto() + " con cobertura";
+        return helado.producto() + "con cobertura ";
 
     }
 
