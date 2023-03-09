@@ -34,9 +34,7 @@ public class Postwork4Application implements CommandLineRunner{
 		System.out.println("Introduce el correo electronico: ");
 		String email = reader.nextLine();
 
-
 		Persona persona = new Persona(nombre, telefono,edad,email,direccion);
-
 		System.out.println(persona);
 	}
 }
