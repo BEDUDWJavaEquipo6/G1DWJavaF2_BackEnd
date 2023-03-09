@@ -7,7 +7,6 @@ public class Persona {
     private String email;
     private String telefono;
     private String direccion;
-
     private String id;
 
     public String getId() {
@@ -64,5 +63,12 @@ public class Persona {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    @Override
+    public String toString(){
+        return "Persona [" + "nombre: " + nombre + ", apellido: " + apellido + ", edad: " + edad
+                + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion
+                + ", id: " + id + "]"
     }
 }
