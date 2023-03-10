@@ -69,6 +69,6 @@ public class Persona {
     public String toString(){
         return "Persona [" + "nombre: " + nombre + ", apellido: " + apellido + ", edad: " + edad
                 + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion
-                + ", id: " + id + "]"
+                + ", id: " + id + "]";
     }
 }

@@ -77,6 +77,23 @@ A continuación te dejamos una lista de recursos donde podrás estudiar más ace
 
 <br>
 
+1. Baja el código en tu computadora.
+
+2. Ejecuta el comando gradle dentro del folder postwork.
+   ``` 
+   gradle.build
+   ```
+
+3. Modifica comentando y descomentado los complementos
+del helado que no deseas incluir en la orden
+
+4. Ejecuta el comando gradle dentro del folder postwork.
+   ``` 
+   gradle run
+   ```
+![Ejecutando postwork2](images/postwork1Solved.png)
+   
+
 [**`Siguiente`** -> postwork](../postwork3/)
 
 [**`Regresar`**](../)

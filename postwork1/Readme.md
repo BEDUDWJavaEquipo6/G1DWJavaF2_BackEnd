@@ -19,7 +19,7 @@ de proyectos. Vamos a realizar un ejemplo empleando el [Gradle Markdown Plugin](
    }
    ```
 
-2. Ejecuta el comando gradle dentro del folder postwork1
+2. Ejecuta el comando gradle dentro del folder postwork.
    ``` 
    gradle.build
    ```

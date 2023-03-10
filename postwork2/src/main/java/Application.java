@@ -4,8 +4,8 @@ public class Application {
 
         helado = new Cobertura(helado);
         helado = new Granola(helado);
-        helado = new Galleta(helado);
-        helado = new Mermelada(helado);
+        //helado = new Galleta(helado);
+        //helado = new Mermelada(helado);
         helado = new Topping(helado);
         System.out.println(helado.producto());
         System.out.println(helado.precio());
