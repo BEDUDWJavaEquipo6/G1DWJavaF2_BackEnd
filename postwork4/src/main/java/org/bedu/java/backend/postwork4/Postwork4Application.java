@@ -25,19 +25,24 @@ public class Postwork4Application implements CommandLineRunner{
 		System.out.println("Introduce el apellido: ");
 		String apellido = reader.nextLine();
 
+		System.out.println("Introduce el ID: ");
+		String id = reader.nextLine();
+
+/*
 		System.out.println("Introduce el teléfono: ");
 		String telefono = reader.nextLine();
-
+*/
 		System.out.println("Introduce la edad: ");
-		int edad = reader.nextLine();
-
+		int edad = Integer.parseInt(reader.nextLine());
+/*
 		System.out.println("Introduce direccion: ");
 		String direccion = reader.nextLine();
 
 		System.out.println("Introduce el correo electronico: ");
 		String email = reader.nextLine();
-
-		Persona persona = new Persona( nombre,apellido,telefono,edad,email,direccion);
+*/
+		Persona persona = new Persona( id,nombre,apellido, edad);
+		//,telefono,edad,email,direccion);
 		System.out.println(persona);
 	}
 }
