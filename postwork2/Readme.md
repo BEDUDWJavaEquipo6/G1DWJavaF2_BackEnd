@@ -81,7 +81,7 @@ A continuación te dejamos una lista de recursos donde podrás estudiar más ace
 
 2. Ejecuta el comando gradle dentro del folder postwork.
    ``` 
-   gradle.build
+   gradle build
    ```
 
 3. Modifica comentando y descomentado los complementos
@@ -91,7 +91,7 @@ del helado que no deseas incluir en la orden
    ``` 
    gradle run
    ```
-![Ejecutando postwork2](images/postwork1Solved.png)
+![Ejecutando postwork2](images/postwork2Solved.png)
    
 
 [**`Siguiente`** -> postwork](../postwork3/)

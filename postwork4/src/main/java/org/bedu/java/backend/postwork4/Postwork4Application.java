@@ -1,8 +1,11 @@
 package org.bedu.java.backend.postwork4;
 
-import gra.springframework.boot.CommandLineRunner;
+import org.bedu.java.backend.postwork4.model.Persona;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Scanner;
 
 @SpringBootApplication
 public class Postwork4Application implements CommandLineRunner{
@@ -22,19 +25,24 @@ public class Postwork4Application implements CommandLineRunner{
 		System.out.println("Introduce el apellido: ");
 		String apellido = reader.nextLine();
 
+		System.out.println("Introduce el ID: ");
+		String id = reader.nextLine();
+
+/*
 		System.out.println("Introduce el teléfono: ");
 		String telefono = reader.nextLine();
-
+*/
 		System.out.println("Introduce la edad: ");
-		int edad = reader.nextLine();
-
+		int edad = Integer.parseInt(reader.nextLine());
+/*
 		System.out.println("Introduce direccion: ");
 		String direccion = reader.nextLine();
 
 		System.out.println("Introduce el correo electronico: ");
 		String email = reader.nextLine();
-
-		Persona persona = new Persona(nombre, telefono,edad,email,direccion);
+*/
+		Persona persona = new Persona( id,nombre,apellido, edad);
+		//,telefono,edad,email,direccion);
 		System.out.println(persona);
 	}
 }
