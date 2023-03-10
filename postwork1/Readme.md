@@ -51,6 +51,8 @@ plugins {
 
 **Todos los archivos se convertiran en BULK o grupo**
 
+![Archivos Convertidos](images/postwork1Solved.png)
+
 [**`Siguiente`** -> postwork](../postwork2/)
 
 [**`Regresar`**](../)
