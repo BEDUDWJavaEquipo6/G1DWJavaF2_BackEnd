@@ -48,6 +48,6 @@ revisa estas lineas en gradle.build
 ![Ejecutando postwork3](images/postwork4Solved.png)
 
 
-[**`Siguiente`** -> sesión 05](../postwork5/)
+[**`Siguiente`** -> postwork](../postwork5/)
 
 [**`Regresar`**](../)
