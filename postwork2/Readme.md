@@ -91,7 +91,7 @@ del helado que no deseas incluir en la orden
    ``` 
    gradle run
    ```
-![Ejecutando postwork2](images/postwork1Solved.png)
+![Ejecutando postwork2](images/postwork2Solved.png)
    
 
 [**`Siguiente`** -> postwork](../postwork3/)
