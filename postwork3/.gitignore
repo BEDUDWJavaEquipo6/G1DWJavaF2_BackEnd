@@ -1,20 +1,5 @@
-#Del Repo de Expert
-.vscode/
-**/*/.gradle
-#**/*/build
-**/*/.DS_Store
-
-**/*/gradle/**
-**/*/gradlew
-**/*/.gradlew.bat
-**/*/.idea/**
-
-# Default ignored files
-/shelf/
-/workspace.xml
-
-# Created by https://www.toptal.com/developers/gitignore/api/gradle,java,intellij+all,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=gradle,java,intellij+all,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/java,gradle,intellij+all
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle,intellij+all
 
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -130,29 +115,9 @@ fabric.properties
 hs_err_pid*
 replay_pid*
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
 ### Gradle ###
 .gradle
-#/build/
-#**/build/
+**/build/
 !src/**/build/
 
 # Ignore Gradle GUI config
@@ -163,8 +128,6 @@ gradle-app.setting
 
 # Avoid ignore Gradle wrappper properties
 !gradle-wrapper.properties
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
 
 # Cache of project
 .gradletasknamecache
@@ -179,4 +142,4 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
-# End of https://www.toptal.com/developers/gitignore/api/gradle,java,intellij+all,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij+all
