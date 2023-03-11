@@ -3,16 +3,15 @@ package org.bedu.java.backend.postwork4.model;
 public class Persona {
     private String nombre;
     private String apellido;
-
     private int edad;
-    /*
-    private String email;
     private String telefono;
-    private String direccion;
-    */
     private String id;
 
 
+    /*
+    private String email;
+    private String direccion;
+    */
 
     public String getId() {
         return id;
@@ -45,14 +44,6 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-/*
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getTelefono() {
         return telefono;
@@ -61,6 +52,16 @@ public class Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    /*
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 
     public String getDireccion() {
         return direccion;
@@ -91,10 +92,20 @@ public class Persona {
         this.apellido = apellido;
         this.edad = edad;
     }
+
+    public Persona(String id,String nombre, String apellido, int edad, String telefono) {
+        super();
+        this.id=id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.telefono = telefono;
+    }
+
     @Override
     public String toString(){
         return "Persona [Id: " + id + ", nombre: " + nombre + ", apellido: " + apellido
-          + ", edad: " + edad  +  "]";
+          + ", edad: " + edad  + ", telefono: " + telefono + "]";
 
         /*
                 + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion
