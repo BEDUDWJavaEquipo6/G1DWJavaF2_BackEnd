@@ -54,8 +54,10 @@ A continuación te dejamos una lista de recursos donde podrás obtener más info
    ``` 
    gradle test
    ```
+***Ejecutando postwork3 con código hecho por el equipo***
 ![Ejecutando postwork3 con código hecho por el equipo](images/codigoequipo6.png)
 
+***Ejecutando postwork3 con código bedu***
 ![Ejecutando postwork3 con código bedu](images/solucionbedu.png)
 
 [**`Siguiente`** -> postwork](../postwork4/)
