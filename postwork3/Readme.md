@@ -52,9 +52,11 @@ A continuación te dejamos una lista de recursos donde podrás obtener más info
 
 4. Ejecuta el comando gradle dentro del folder postwork.
    ``` 
-   gradle run
+   gradle test
    ```
-![Ejecutando postwork2](images/postwork3Solved.png)
+![Ejecutando postwork3 con código hecho por el equipo](images/codigoequipo6.png)
+
+![Ejecutando postwork3 con código bedu](images/solucionbedu.png)
 
 [**`Siguiente`** -> postwork](../postwork4/)
 
