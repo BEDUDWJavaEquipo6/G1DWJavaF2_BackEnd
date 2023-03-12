@@ -1,4 +1,4 @@
-package postwork5.postwork5.service;
+package org.bedu.java.backend.postwork5.postwork5.service;
 
 import org.springframework.stereotype.Service;
 import static java.util.Collections.replaceAll;

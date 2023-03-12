@@ -1,4 +1,4 @@
-package postwork5.postwork5.model;
+package org.bedu.java.backend.postwork5.postwork5.model;
 
 public class Persona {
     private String nombre;
@@ -69,30 +69,20 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public Persona(String nombre, String apellido) {
-        super();
-        this.nombre = nombre;
-        this.apellido = apellido;
 
-    }
-    public Persona(String id,String nombre, String apellido/*, int edad*/) {
+    public Persona(String id,String nombre, String apellido, int edad, String telefono) {
         super();
         this.id=id;
         this.nombre = nombre;
         this.apellido = apellido;
-        //this.edad = edad;
-    }
-    public Persona(String id,String nombre, String apellido, int edad) {
-        super();
-        this.id=id;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.telefono = telefono;
         this.edad = edad;
     }
+
     @Override
     public String toString(){
         return "Persona [Id: " + id + ", nombre: " + nombre + ", apellido: " + apellido
-                + ", edad: " + edad  +  "]";
+                + ", edad: " + edad  + ", telefono: " + telefono  +  "]";
 
         /*
                 + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion

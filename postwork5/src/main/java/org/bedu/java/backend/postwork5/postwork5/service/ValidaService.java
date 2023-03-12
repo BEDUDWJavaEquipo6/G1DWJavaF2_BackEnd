@@ -1,4 +1,4 @@
-package postwork5.postwork5.service;
+package org.bedu.java.backend.postwork5.postwork5.service;
 
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,8 @@ public class ValidaService {
 
 
     public boolean Valida(String telefono){
-
-        Pattern pattern = Pattern.compile("^(\\d{3}[- ]?){2}\\d{4}$");
-        Matcher matcher = pattern.matcher(telefono);
-        return matcher.matches();
+//
+        return Pattern.compile("^[1-9]\\d{2} \\d{3} \\d{4}").matcher(telefono).matches()
+                || Pattern.compile("^[1-9]\\d{2}-\\d{3}-\\d{4}").matcher(telefono).matches();
     }
 }
