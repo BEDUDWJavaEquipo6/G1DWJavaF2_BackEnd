@@ -14,4 +14,8 @@ public class ValidaService {
         return Pattern.compile("^[1-9]\\d{2} \\d{3} \\d{4}").matcher(telefono).matches()
                 || Pattern.compile("^[1-9]\\d{2}-\\d{3}-\\d{4}").matcher(telefono).matches();
     }
+
+    public static String Comprueba(String telefono){
+        return telefono.replaceAll("[^0-9.]","");
+    }
 }
