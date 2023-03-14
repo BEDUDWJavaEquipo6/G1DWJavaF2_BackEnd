@@ -20,7 +20,7 @@ Equipo 6
 * [2: Patrón Decorador](postwork2/)
 * [3: Pruebas dinámicas](postwork3/)
 * [4: Aplicación de línea de comandos](postwork4/)
-* ~~5: Inversión de Control (IoC) en Spring Boot~~
+* [5: Inversión de Control (IoC) en Spring Boot](postwork5/)
 * ~~6: Introducción a Spring MVC~~
 * ~~7: Integración de Thymeleaf y Spring Boot~~
 * ~~8: Conexión a base de datos con Spring Data~~
