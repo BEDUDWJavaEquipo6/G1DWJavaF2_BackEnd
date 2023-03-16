@@ -1,6 +1,6 @@
 package org.bedu.java.backend.postwork6.model;
 
-public class Persona {
+public class Persona  implements Comparable<Persona> {
     private String nombre;
     private String apellido;
 
@@ -88,6 +88,20 @@ public class Persona {
                 + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion
                 + ", id: " + id + "]";
          */
+    }
+    @Override
+    public Persona compareTo(Persona p){
+        //Comparar dos obj Persona por campops nombre y apellido o será objeto completo..perguntar equipo y Expert
+            if(this.apellido==p.apellido)
+                return 0;
+            else if(this.apellido>p.apellido)
+                return 1;
+            else
+                return -1;
+    }
+    @Override
+    public String (){
+        //Comparar dos obj Persona
     }
 }
 
