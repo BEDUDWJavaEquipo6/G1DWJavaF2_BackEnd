@@ -395,37 +395,21 @@ Continúa agregando más registros para que veas como poco a poco se va llenando
 * Tipo de estructura del proyecto:
 
 ```
-  src
-  ├── main
-  │   ├── java
-  │   │   └── com.example.myproject
-  │   │       ├── controller
-  │   │       │   ├── UserController.java
-  │   │       │   └── ...
-  │   │       ├── model
-  │   │       │   ├── User.java
-  │   │       │   └── ...
-  │   │       ├── repository
-  │   │       │   ├── UserRepository.java
-  │   │       │   └── ...
-  │   │       ├── service
-  │   │       │   ├── UserService.java
-  │   │       │   └── ...
-  │   │       └── MyProjectApplication.java
-  │   └── resources
-  │       ├── application.properties
-  │       ├── static
-  │       └── templates
-  └── test
-  └── java
-  └── com.example.myproject
-  ├── controller
-  │   ├── UserControllerTest.java
-  │   └── ...
-  ├── service
-  │   ├── UserServiceTest.java
-  │   └── ...
-  └── MyProjectApplicationTest.java
+  src/
+  main/
+    java/
+      com/
+        example/
+          demo/
+            controller/
+              PersonaController.java
+            model/
+              Persona.java
+            repository/
+              PersonaRepository.java
+            service/
+              PersonaService.java
+
 
 ```
 
