@@ -1,6 +1,6 @@
 package org.bedu.java.backend.postwork6;
 
-import org.bedu.java.backend.postwork6.service.FormatearTel;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,15 +10,15 @@ import org.bedu.java.backend.postwork6.service.ValidaService;
 
 import java.util.Scanner;
 
+import static org.bedu.java.backend.postwork6.service.ValidaService.formatear;
+
 @SpringBootApplication
 public class Postwork6Application implements CommandLineRunner {
 
 	private ValidaService validaService;
-	private FormatearTel formatearTel;
 	@Autowired
-	public Postwork6Application(ValidaService validaService, FormatearTel formatearTel){
+	public Postwork6Application(ValidaService validaService){
 		this.validaService = validaService;
-		this.formatearTel = formatearTel;
 
 	}
 
@@ -58,7 +58,7 @@ public class Postwork6Application implements CommandLineRunner {
 			telefono = ValidaService.Comprueba(telefono);
 //			System.out.print("Telefono con solo dígitos: ");
 //			System.out.println(compruebaService.Comprueba(telefono));
-			telefono = FormatearTel.formatear(telefono);
+			telefono = formatear(telefono);
 			//,telefono,edad,email,direccion);
 			Persona persona = new Persona( id,nombre,apellido, edad,telefono);
 			System.out.println(persona);

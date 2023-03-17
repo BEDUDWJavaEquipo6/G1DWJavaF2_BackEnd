@@ -15,6 +15,9 @@ Almacene la información en memoria usando un Set de Java que ordene las entrada
  */
 
 
+import org.bedu.java.backend.postwork6.model.Persona;
+import org.springframework.stereotype.Repository;
+
 import java.util.Set;
 import java.util.TreeSet;
 @Repository
