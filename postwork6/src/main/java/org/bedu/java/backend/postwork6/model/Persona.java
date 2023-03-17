@@ -1,33 +1,20 @@
 package org.bedu.java.backend.postwork6.model;
 
 public class Persona implements Comparable<Persona> {
+
     private String nombre;
+    private String apellido;
     private String telefono;
+    private int id;
 
-    public Persona(String nombre, String telefono) {
+    public Persona(String nombre, String apellido, String telefono, int id) {
         this.nombre = nombre;
+        this.apellido = apellido;
         this.telefono = telefono;
+        this.id = id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = limpiarTelefono(telefono);
-    }
-
-    private String limpiarTelefono(String telefono) {
-        return "(" + telefono.substring(0, 2) + ")-" + telefono.substring(2, 6) + "-" + telefono.substring(6, 10);
-    }
+    // getters y setters
 
     @Override
     public int compareTo(Persona o) {
@@ -35,8 +22,24 @@ public class Persona implements Comparable<Persona> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Persona persona = (Persona) o;
+        return id == persona.id &&
+                Objects.equals(nombre, persona.nombre) &&
+                Objects.equals(apellido, persona.apellido) &&
+                Objects.equals(telefono, persona.telefono);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellido, telefono, id);
+    }
+
+    @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", telefono=" + telefono + "]";
+        return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", id=" + id + "]";
     }
 
 }
