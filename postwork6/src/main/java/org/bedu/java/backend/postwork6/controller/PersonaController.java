@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.bedu.java.backend.postwork6.service.PersonaService;
 
 @RestController
 public class PersonaController {
@@ -15,13 +16,16 @@ public class PersonaController {
     private PersonaService personaService;
 
     @PostMapping("/personas")
-    public ResponseEntity<String> addPersona(@RequestBody Persona persona) {
-        personaService.addPersona(persona);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+    public ResponseEntity<String> agregarPersona(@RequestBody Persona persona) {
+        personaService.agregarPersona(persona);
+        return new ResponseEntity<>("Persona agregada correctamente", HttpStatus.CREATED);
     }
 
+
     @GetMapping("/personas")
-    public Set<Persona> getPersonas() {
-        return personaService.getPersonas();
+    public ResponseEntity<List<Persona>> obtenerPersonas() {
+        List<Persona> listaPersonas = personaService.obtenerPersonas();
+        return new ResponseEntity<>(listaPersonas, HttpStatus.OK);
     }
+
 }

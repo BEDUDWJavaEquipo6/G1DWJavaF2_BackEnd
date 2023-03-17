@@ -11,8 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class PersonaService {
-    @Autowired
     private PersonaRepository personaRepository;
+
+    @Autowired
+    public PersonaService(PersonaRepository personaRepository) {
+        this.personaRepository = personaRepository;
+    }
 
     public void addPersona(Persona persona) {
         personaRepository.addPersona(persona);

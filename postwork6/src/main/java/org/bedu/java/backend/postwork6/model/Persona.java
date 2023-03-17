@@ -1,26 +1,32 @@
 package org.bedu.java.backend.postwork6.model;
-public class Persona {
-    private String name;
+
+public class Persona implements Comparable<Persona> {
+    private String nombre;
     private String telefono;
 
-    public Persona(String name, String telefono) {
-        this.name = name;
+    public Persona(String nombre, String telefono) {
+        this.nombre = nombre;
         this.telefono = telefono;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
     public String getTelefono() {
         return telefono;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTelefono(String telefono) {
+        this.telefono = limpiarTelefono(telefono);
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    private String limpiarTelefono(String telefono) {
+        return "(" + telefono.substring(0, 2) + ")-" + telefono.substring(2, 6) + "-" + telefono.substring(6, 10);
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return this.nombre.compareTo(o.getNombre());
     }
 }

@@ -395,21 +395,11 @@ Continúa agregando más registros para que veas como poco a poco se va llenando
 * Tipo de estructura del proyecto:
 
 ```
-  src/
-  main/
-    java/
-      com/
-        example/
-          demo/
-            controller/
-              PersonaController.java
-            model/
-              Persona.java
-            repository/
-              PersonaRepository.java
-            service/
-              PersonaService.java
-
+  src/main/java/org/bedu/java/backend/postwork6/
+    controller/
+    model/
+    repository/
+    service/
 
 ```
 

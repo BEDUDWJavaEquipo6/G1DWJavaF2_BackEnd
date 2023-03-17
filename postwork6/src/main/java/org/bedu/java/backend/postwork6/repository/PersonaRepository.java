@@ -29,15 +29,15 @@ import java.util.TreeSet;
 I would use a TreeSet which is a SortedSet. You need to define your custom class as Comparable based on the name and your collection will always be sorted.
      */
 
-    @Repository
-    public class PersonaRepository {
-        private Set<Persona> personas = new TreeSet<>();
+@Repository
+public class PersonaRepository {
+    private Set<Persona> personas = new TreeSet<>();
 
-        public void addPersona(Persona persona) {
-            personas.add(persona);
-        }
-
-        public Set<Persona> getPersonas() {
-            return personas;
-        }
+    public void addPersona(Persona persona) {
+        personas.add(persona);
     }
+
+    public Set<Persona> getPersonas() {
+        return personas;
+    }
+}
