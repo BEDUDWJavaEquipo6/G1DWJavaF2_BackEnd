@@ -392,6 +392,59 @@ Continúa agregando más registros para que veas como poco a poco se va llenando
 
 <br>
 
+* Tipo de estructura del proyecto:
+
+```
+  src
+  ├── main
+  │   ├── java
+  │   │   └── com.example.myproject
+  │   │       ├── controller
+  │   │       │   ├── UserController.java
+  │   │       │   └── ...
+  │   │       ├── model
+  │   │       │   ├── User.java
+  │   │       │   └── ...
+  │   │       ├── repository
+  │   │       │   ├── UserRepository.java
+  │   │       │   └── ...
+  │   │       ├── service
+  │   │       │   ├── UserService.java
+  │   │       │   └── ...
+  │   │       └── MyProjectApplication.java
+  │   └── resources
+  │       ├── application.properties
+  │       ├── static
+  │       └── templates
+  └── test
+  └── java
+  └── com.example.myproject
+  ├── controller
+  │   ├── UserControllerTest.java
+  │   └── ...
+  ├── service
+  │   ├── UserServiceTest.java
+  │   └── ...
+  └── MyProjectApplicationTest.java
+
+```
+
+
+When structuring a Spring Boot project for a REST API web application, there are several common practices that can help make your code more organized and easier to maintain. Here is an example folder structure that you can follow:
+
+The src folder contains your main source code and test code. Inside src, there are two main folders: main and test. The main folder contains the actual source code for your application, while the test folder contains your unit tests.
+
+Under the main folder, you can create a package for your project, in this example com.example.myproject. Inside this package, you can create separate packages for controllers, models, repositories, and services. These packages will contain the corresponding Java classes.
+
+The controller package contains classes that handle HTTP requests and responses. The model package contains the classes that represent your data models. The repository package contains classes that interact with the database or other data sources. The service package contains the business logic of your application.
+
+The resources folder contains files that are not Java source code, such as configuration files, static files, and templates.
+
+Finally, you can create a separate package for your main application class, which in this case is MyProjectApplication.java.
+
+It's important to keep in mind that this is just an example structure and you can adjust it based on your specific project requirements. However, following a standard structure like this can help make your code more maintainable and easier for other developers to understand.
+
+
 [**`Siguiente`** -> sesión 07](../../Sesion-07/)
 
 [**`Regresar`**](../)
