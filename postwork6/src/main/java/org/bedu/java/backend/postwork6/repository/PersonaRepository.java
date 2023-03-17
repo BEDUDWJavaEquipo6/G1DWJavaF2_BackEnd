@@ -16,6 +16,7 @@ Almacene la información en memoria usando un Set de Java que ordene las entrada
 
 import org.springframework.stereotype.Repository;
 import org.bedu.java.backend.postwork6.model.Persona;
+import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -29,16 +30,27 @@ import java.util.TreeSet;
 I would use a TreeSet which is a SortedSet. You need to define your custom class as Comparable based on the name and your collection will always be sorted.
      */
 
+@Repository
 public class PersonaRepository {
 
-    private Set<Persona> personas = new TreeSet<>();
+    private final Set<Persona> personas = new TreeSet<>();
 
-    public void agregarPersona(Persona persona) {
+    public Persona agregarPersona(Persona persona) {
+        Long id = obtenerSiguienteId();
+        persona.setId(id);
         personas.add(persona);
+        return persona;
     }
 
     public Set<Persona> obtenerPersonas() {
-        return personas;
+        return Collections.unmodifiableSet(personas);
     }
 
+    private Long obtenerSiguienteId() {
+        Long id = 1L;
+        if (!personas.isEmpty()) {
+            id = Collections.max(personas).getId() + 1;
+        }
+        return id;
+    }
 }

@@ -15,13 +15,17 @@ public class PhoneBookService {
         this.validarService = validarService;
     }
 
-    public void agregarPersona(Persona persona) throws InvalidPhoneFormatException {
-        String telefonoValidado = validarService.validarTelefono(persona.getTelefono());
-        Persona personaValidada = new Persona(persona.getNombre(), telefonoValidado);
-        personaRepository.agregarPersona(personaValidada);
+    public void agregarPersona(String nombre, String apellido, String telefono) throws TelefonoInvalidoException {
+        if (!validarService.validarTelefono(telefono)) {
+            throw new TelefonoInvalidoException("El formato del teléfono no es válido");
+        }
+        Long id = personaRepository.obtenerSiguienteId();
+        Persona persona = new Persona(id, nombre, apellido, telefono);
+        personaRepository.agregarPersona(persona);
     }
 
     public List<Persona> obtenerPersonas() {
         return personaRepository.obtenerPersonas();
     }
+
 }
