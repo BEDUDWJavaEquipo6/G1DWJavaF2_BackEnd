@@ -1,4 +1,6 @@
 package org.bedu.java.backend.postwork6.model;
+
+import java.util.Objects;
 public class Persona implements Comparable<Persona> {
 
     private Long id;

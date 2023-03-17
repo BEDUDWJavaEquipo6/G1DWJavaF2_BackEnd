@@ -1,5 +1,5 @@
 package org.bedu.java.backend.postwork6.service;
-
+import java.util.Set;
 import org.springframework.stereotype.Service;
 import org.bedu.java.backend.postwork6.repository.PersonaRepository;
 import org.bedu.java.backend.postwork6.service.ValidarService;
@@ -24,7 +24,7 @@ public class PhoneBookService {
         personaRepository.agregarPersona(persona);
     }
 
-    public List<Persona> obtenerPersonas() {
+    public Set<Persona> obtenerPersonas() {
         return personaRepository.obtenerPersonas();
     }
 
