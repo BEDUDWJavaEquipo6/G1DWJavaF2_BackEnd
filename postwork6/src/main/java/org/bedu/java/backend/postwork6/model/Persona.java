@@ -9,6 +9,10 @@ public class Persona implements Comparable<Persona> {
         this.telefono = telefono;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -29,4 +33,10 @@ public class Persona implements Comparable<Persona> {
     public int compareTo(Persona o) {
         return this.nombre.compareTo(o.getNombre());
     }
+
+    @Override
+    public String toString() {
+        return "Persona [nombre=" + nombre + ", telefono=" + telefono + "]";
+    }
+
 }
