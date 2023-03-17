@@ -14,11 +14,11 @@ Almacene la información en memoria usando un Set de Java que ordene las entrada
  Opcional: read one Persona, para future GET by Id
  */
 
-
+import org.springframework.stereotype.Repository;
+import org.bedu.java.backend.postwork6.model.Persona;
 import java.util.Set;
 import java.util.TreeSet;
-@Repository
-public class PhoneBook{
+
     //private static Set<Persona> phoneBook new Set<>();
 
     /*
@@ -28,24 +28,16 @@ public class PhoneBook{
 
 I would use a TreeSet which is a SortedSet. You need to define your custom class as Comparable based on the name and your collection will always be sorted.
      */
-    private static Set<Persona> phoneBook = new TreeSet<Persona>();
 
-    /**
-     * Metodo que agrega persona al PhoneBook
-     * @param persona EL objeto Persona que vamos a agregar al directorio
-     * @return 1era Fase: Exito si lo metio / 2nda Fase: el Card de la persona recien ingresado
-     */
-    public Persona addPersona(Persona persona){
-        phoneBook.add(persona);
-        return "Persona Added Succesfully" //Probar pimero que lo meta
-        //return persona;         //Si lo metio, regresa ya el Card de Persona
-    }
+    @Repository
+    public class PersonaRepository {
+        private Set<Persona> personas = new TreeSet<>();
 
-    /**
-     * Metodo que lee el contenido del PhoneBook
-     * @return
-     */
-    public Set<Persona> readListaPhoneBook(){
-        return phoneBook;
+        public void addPersona(Persona persona) {
+            personas.add(persona);
+        }
+
+        public Set<Persona> getPersonas() {
+            return personas;
+        }
     }
-}

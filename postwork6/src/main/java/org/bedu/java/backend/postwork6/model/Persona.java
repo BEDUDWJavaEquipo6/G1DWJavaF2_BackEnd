@@ -1,3 +1,4 @@
+package org.bedu.java.backend.postwork6.model;
 public class Persona {
     private String name;
     private String telefono;
