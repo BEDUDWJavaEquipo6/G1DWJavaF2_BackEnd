@@ -46,17 +46,13 @@ bootRun {
 
 1. Baja el código en tu computadora.
 
-2. Ejecuta el comando gradle dentro del folder postwork.
-   ``` 
-   gradle build
-   ```
-2. 1. Si trabajas con equipos donde alguno tiene una version mas antigua de
-      JDK que la tuya, ejeplo JDK 18; para hacer codigo compatible con tus colegas
-      revisa estas lineas en gradle.build
+2. Si trabajas con equipos donde alguno tiene una version mas antigua de
+   JDK que la tuya, ejeplo JDK 18; para hacer codigo compatible con tus colegas
+   revisa estas lineas en gradle.build
 
 ![Ejecutando postwork3](images/ConfigJDK1.8ySpringBoot2.7.9.png)
 
-4. Modifica comentando y descomentado los complementos
+3. Modifica comentando y descomentado los complementos
    del helado que no deseas incluir en la orden
 
 4. Ejecuta el comando gradle dentro del folder postwork.
