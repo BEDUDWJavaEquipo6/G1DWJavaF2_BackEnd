@@ -1,16 +1,25 @@
-package org.bedu.java.backend.postwork6.model;
+package org.bedu.java.backend.postwork7.model;
+
+//Librerias para postwork7 Validation Thymeleaf
+//import jakarta.validation.constraints.*;
+//import javax.validation.constraints.*;
+//import javax.validation.constraints.NotBlank;
+//import javax.validation.constraints.Pattern;
 
 public class Persona  implements Comparable<Persona> {
+    //@NotBlank
     private String nombre;
     private String apellido;
-
     private int edad;
     /*
+    //@Email(regexp =".+@.+\\..+",message = "El correo electrónico tiene un formato incorrecto.")
     private String email;
 
     private String direccion;
     */
+    //@NotBlank
     private String id;
+    //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
     private String telefono;
 
 
