@@ -1,26 +1,24 @@
-package org.bedu.java.backend.postwork6.service;
+package org.bedu.java.backend.postwork7.service;
 
-import org.bedu.java.backend.postwork6.model.Persona;
-import org.bedu.java.backend.postwork6.repository.PersonaRepository;
-import org.bedu.java.backend.postwork6.repository.PersonaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.bedu.java.backend.postwork7.model.Persona;
+import org.bedu.java.backend.postwork7.repository.PersonaRepository;
+
 import org.springframework.stereotype.Service;
-
+//Librerias para postwork4 IoC
+import org.springframework.beans.factory.annotation.Autowired;
+//Librerias para posrtork5 Rest API --iso SET como lista Persona
 import java.util.Set;
 
 @Service
 public class PhoneBookService {
     private ValidaService validaService;
     private PersonaRepository personaRepository;
-
     private String telefono;
-
     @Autowired
     public PhoneBookService(ValidaService validaService, PersonaRepository personaRepository){
         this.validaService = validaService;
         this.personaRepository = personaRepository;
     }
-
     public Persona addPersona(Persona persona){
         if(validaService.Valida(persona.getTelefono())){
             persona.setTelefono(ValidaService.Comprueba(persona.getTelefono()));
@@ -33,12 +31,9 @@ public class PhoneBookService {
             // AQUI VA UNA LINEA DE ERROR no se cual pero algo
             return persona ;
         }
-        //return personaRepository.addPersona(persona);
+
     }
-
     public Set<Persona> readListaPhoneBook(){
-
         return personaRepository.readListaPhoneBook();
     }
-
 }
