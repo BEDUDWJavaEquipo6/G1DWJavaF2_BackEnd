@@ -89,8 +89,8 @@ public class Persona  implements Comparable<Persona> {
                 + ", id: " + id + "]";
          */
     }
-    @Override
-    public Persona compareTo(Persona p){
+   /* @Override
+    public int Persona compareTo(Persona p){
         //Comparar dos obj Persona por campops nombre y apellido o será objeto completo..perguntar equipo y Expert
             if(this.apellido==p.apellido)
                 return 0;
@@ -98,10 +98,16 @@ public class Persona  implements Comparable<Persona> {
                 return 1;
             else
                 return -1;
+        this.persona
     }
     @Override
     public String (){
         //Comparar dos obj Persona
+    }*/
+
+    @Override
+    public int compareTo(Persona o) {
+        return this.nombre.compareTo(o.nombre);
     }
 }
 

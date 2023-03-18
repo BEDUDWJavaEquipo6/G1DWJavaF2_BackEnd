@@ -1,21 +1,24 @@
 package org.bedu.java.backend.postwork6.service;
 
 import org.bedu.java.backend.postwork6.model.Persona;
-import org.bedu.java.backend.postwork6.repository.PhoneBook;
+import org.bedu.java.backend.postwork6.repository.PersonaRepository;
+import org.bedu.java.backend.postwork6.repository.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 @Service
 public class PhoneBookService {
     private ValidaService validaService;
-    private PhoneBook phoneBook;
+    private PersonaRepository personaRepository;
 
     private String telefono;
 
     @Autowired
-    public PhoneBookService(ValidaService validaService, PhoneBook phoneBook){
+    public PhoneBookService(ValidaService validaService, PersonaRepository personaRepository){
         this.validaService = validaService;
-        this.phoneBook = phoneBook;
+        this.personaRepository = personaRepository;
     }
 
     public Persona addPersona(Persona persona){
@@ -27,9 +30,14 @@ public class PhoneBookService {
 
 
         }else {
-            System.out.println("Telefono no valido";
+            System.out.println("Telefono no valido");
         }
-        return phoneBook.addPersona(persona);
+        return personaRepository.addPersona(persona);
+    }
+
+    public Set<Persona> readListaPhoneBook(){
+
+        return personaRepository.readListaPhoneBook();
     }
 
 }

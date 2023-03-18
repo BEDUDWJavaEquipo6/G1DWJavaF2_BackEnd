@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 import java.util.TreeSet;
 @Repository
-public class PhoneBook{
+public class PersonaRepository{
     //private static Set<Persona> phoneBook new Set<>();
 
     /*
@@ -31,7 +31,7 @@ public class PhoneBook{
 
 I would use a TreeSet which is a SortedSet. You need to define your custom class as Comparable based on the name and your collection will always be sorted.
      */
-    private static Set<Persona> phoneBook = new TreeSet<Persona>();
+    private static Set<Persona> phoneBook = new TreeSet<>();
 
     /**
      * Metodo que agrega persona al PhoneBook
@@ -40,8 +40,8 @@ I would use a TreeSet which is a SortedSet. You need to define your custom class
      */
     public Persona addPersona(Persona persona){
         phoneBook.add(persona);
-        return "Persona Added Succesfully" //Probar pimero que lo meta
-        //return persona;         //Si lo metio, regresa ya el Card de Persona
+        //return "Persona Added Succesfully" //Probar pimero que lo meta
+        return persona;         //Si lo metio, regresa ya el Card de Persona
     }
 
     /**
