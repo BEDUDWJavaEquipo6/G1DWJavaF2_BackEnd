@@ -54,7 +54,7 @@ public class PersonaController {
         //                    ....,
         // personaN:{key:valor ...key:valor}
         //}
-        return ResponseEntity.status(HttpStatus.CREATED).body(phoneBookService.readListaPhoneBook());
+        return ResponseEntity.status(HttpStatus.OK).body(phoneBookService.readListaPhoneBook());
         //return variable;
     }
 
