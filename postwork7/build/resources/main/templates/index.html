@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<form th:action="@{/registro}" th:object="${persona}" method="post">
+  <div>
+    <label for="id">Id: </label>
+    <input id="id" type="text" th:field="*{id}">
+    <div th:if="${#fields.hasErrors('id')}" th:errorclass="error" th:errors="*{id}"></div>
+  </div>
+  <div>
+    <label for="nombre">Nombre: </label>
+    <input id="nombre" type="text" th:field="*{nombre}">
+    <div th:if="${#fields.hasErrors('nombre')}" th:errorclass="error" th:errors="*{nombre}"></div>
+  </div>
+  <div>
+    <label for="apellido">Apellido: </label>
+    <input id="apellido" type="tel" th:field="*{telefono}">
+    <div th:if="${#fields.hasErrors('apellido')}" th:errorclass="error" th:errors="*{apellido}" ></div>
+  </div>
+  <div>
+    <label for="telefono">Telefono: </label>
+    <input id="telefono" type="tel" th:field="*{telefono}">
+    <div th:if="${#fields.hasErrors('telefono')}" th:errorclass="error" th:errors="*{telefono}" ></div>
+  </div>
+  <div>
+    <label for="edad">edad: </label>
+    <input id="edad" type="tel" th:field="*{telefono}">
+    <div th:if="${#fields.hasErrors('edad')}" th:errorclass="error" th:errors="*{edad}" ></div>
+  </div>
+
+
+  <input type="submit" th:value="Guardar"/>
+</form>
+
+</body>
+</html>

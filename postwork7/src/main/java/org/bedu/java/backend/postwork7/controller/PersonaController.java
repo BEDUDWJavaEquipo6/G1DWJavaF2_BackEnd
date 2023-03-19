@@ -12,14 +12,17 @@ import java.util.Set;
 //Librerias para postwork6 RestAPI
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 //Librerias para portwotk7 thymeleaf
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 
-@RestController
-@RequestMapping("/api/v1/phonebook")
+
+@Controller
 public class PersonaController {
     private PhoneBookService phoneBookService;
 
@@ -28,74 +31,31 @@ public class PersonaController {
         this.phoneBookService= phoneBookService;
 
     }
-    @PostMapping
-    public ResponseEntity<Persona> postPersona(@RequestBody Persona persona) {
-    //public String postPersona(@RequestBody Persona persona) {
-        //llama PersonaRepository metodo addPersona(Persona persona)
-        //addPersona(Persona persona)
-        /*System.out.println("Creando usuario");
-        System.out.println("Nombre: " + persona.getNombre());
-        System.out.println("Apellido" + persona.getApellido());
-        System.out.println("Telefono" + persona.getTelefono());
-        System.out.println("Id" + persona.getId());
-        return "Usuario Creado";*/
-        return ResponseEntity.status(HttpStatus.CREATED).body(phoneBookService.addPersona(persona));
+
+    @GetMapping({"/", "/index"})
+    public String formularioRegistro(Model model){
+        model.addAttribute("persona", new Persona());
+        return "index";
     }
 
-    /**
-     * getPersonas
-     * @return un JSON
-     */
-
-
-   @GetMapping
-    public ResponseEntity<Set<Persona>> getPersonas() {
-        //llama PersonaRepository metodo readListaPhoneBook()
-        //listaPhoneBook=readListaPhoneBook()
-        //for recorre elementos de la listaPhoneBook
-        //genera variable = {
-        // persona1:{key:valor ...key:valor},
-        // persona2:{key:valor ...key:valor}.
-        //                    ....,
-        //                    ....,
-        // personaN:{key:valor ...key:valor}
-        //}
-        return ResponseEntity.status(HttpStatus.OK).body(phoneBookService.readListaPhoneBook());
-        //return variable;
+    @GetMapping("/personas")
+    public String listadoPersonas(Model model){
+        model.addAttribute("personas", phoneBookService.readListaPhoneBook());
+        return "personas";
     }
 
-    /**
-     *
-     * @param persona
-     * @param id
-     * @return
-     */
- /*   @PostMapping("/{id}")
-    public String postPersonaId(@RequestBody Persona persona, @PathVariable("id") String id) {
+    @PostMapping("/registro")
+    public ModelAndView registra(@Valid Persona persona, Errors errors) {
 
-        return "Modificaron datos de la PERsona con  Id";
+        String vistaResultado = "registroExitoso";
+
+        if(errors.hasErrors()){
+            vistaResultado = "index";
+        }
+
+        ModelAndView mav = new ModelAndView(vistaResultado);
+        mav.addObject("persona", phoneBookService.addPersona(persona));
+        return mav;
     }
-
-    /**
-     * getPersonaId
-     * @param id
-     * @return
-     */
-/*    @GetMapping("/{id}")
-    public String getPersonaId(@PathVariable("id") String id) {
-
-        return "JSON de la Persona con Id";
-    }
-
-    /**
-     * delPersonaId
-     * @param id
-     * @return
-     */
-  /*  @DelMapping("/{id}")
-    public String delPersonaId(@PathVariable("id") String id) {
-
-        return "Elimino la Persona con Id";
-    }*/
 
 }
