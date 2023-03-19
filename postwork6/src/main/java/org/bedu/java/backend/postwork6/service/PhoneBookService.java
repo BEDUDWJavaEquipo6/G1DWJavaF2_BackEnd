@@ -23,10 +23,11 @@ public class PhoneBookService {
 
     public Persona addPersona(Persona persona){
         if(validaService.Valida(persona.getTelefono())){
+            System.out.println("Obj Persona capturado: "+persona);
             persona.setTelefono(ValidaService.Comprueba(persona.getTelefono()));
-            System.out.println("Ejecutando Limpieza del teléfono en Comprueba: "+persona.getTelefono());
+            System.out.println("Ejecutando limpieza del teléfono metodo Comprueba(): "+persona.getTelefono());
             persona.setTelefono(ValidaService.formatear(persona.getTelefono()));
-            System.out.println("Dando formato al teléfono: "+persona.getTelefono());
+            System.out.println("Dando formato al teléfono con metodo formatear(): "+persona.getTelefono());
             return personaRepository.addPersona(persona);
         }else {
             System.out.println("Telefono no valido");
