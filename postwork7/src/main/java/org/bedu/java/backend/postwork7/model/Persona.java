@@ -1,17 +1,16 @@
 package org.bedu.java.backend.postwork7.model;
 
-//Librerias para postwork7 Validation Thymeleaf
-//import jakarta.validation.constraints.*;
-import javax.validation.constraints.*;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 public class Persona  implements Comparable<Persona> {
     @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
     @NotBlank(message = "El apellido es obligatorio")
     private String apellido;
-    @NotBlank(message = "La edad es obligatoria")
+    @Positive(message = "valores mayor a 0")
     private int edad;
     /*
     //@Email(regexp =".+@.+\\..+",message = "El correo electrónico tiene un formato incorrecto.")
@@ -87,7 +86,6 @@ public class Persona  implements Comparable<Persona> {
 
 
     public Persona(String id,String nombre, String apellido, int edad, String telefono) {
-        super();
         this.id=id;
         this.nombre = nombre;
         this.apellido = apellido;
