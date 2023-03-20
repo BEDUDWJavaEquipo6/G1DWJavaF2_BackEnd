@@ -7,11 +7,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public class Persona  implements Comparable<Persona> {
-    @NotBlank(message = "Campo obligatorio")
+    @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
-    @NotBlank(message = "Campo obligatorio")
+    @NotBlank(message = "El apellido es obligatorio")
     private String apellido;
-    @NotBlank(message = "Campo obligatorio")
+    @NotBlank(message = "La edad es obligatoria")
     private int edad;
     /*
     //@Email(regexp =".+@.+\\..+",message = "El correo electrónico tiene un formato incorrecto.")
