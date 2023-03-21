@@ -249,7 +249,10 @@ Ahora ejecuta la aplicación y desde postman envía peticiónes la URL base es: 
 
 
 <br>
-**Capturas de ingreso de registros y guardado de datos**
+  
+ ---
+**Capturas de ingreso de registros y guardado de datos**  <br>
+  
 ![img.png](images%2Fimg.png)
 ![img_1.png](images%2Fimg_1.png)
 ![img_2.png](images%2Fimg_2.png)
@@ -260,6 +263,7 @@ Ahora ejecuta la aplicación y desde postman envía peticiónes la URL base es: 
 **Listado y formateo de telefono en orden alfabetico**
 ![img_6.png](images%2Fimg_6.png)
 <br>
+  ---
 [**`Siguiente`** -> sesión 08](../../Sesion-08/)
 
 [**`Regresar`**](../)
