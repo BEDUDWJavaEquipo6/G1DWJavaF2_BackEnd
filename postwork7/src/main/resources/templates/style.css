@@ -8,7 +8,36 @@ fieldset, img {border:0}
 ol, ul, li {list-style:none}
 
 :focus {outline:none}
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  padding: 6px 25px 0px 20px;
+  margin: 10px 8px 20px 0px;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+<!--  width: 50px; height: 27px;-->
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #3a57af;
+  -webkit-box-shadow: 0 3px rgba(58,87,175,.75);
+  -moz-box-shadow: 0 3px rgba(58,87,175,.75);
+  box-shadow: 0 3px rgba(58,87,175,.75);
+  transition: all 0.1s linear 0s;
+  top: 0px;
+  position: relative;
+}
 
+.button:hover {
+  top: 3px;
+  background-color:#2e458b;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+}
 body,
 input,
 textarea,
@@ -108,7 +137,7 @@ hr{
   opacity: 0.3;
 }
 
-input[type=text],input[type=password]{
+input[type=tel],input[type=text],input[type=password]{
   width: 200px;
   height: 39px;
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
@@ -123,7 +152,6 @@ input[type=text],input[type=password]{
   margin-top: 13px;
   padding-left: 10px;
 }
-
 input[type=password]{
   margin-bottom: 25px;
 }
@@ -185,3 +213,7 @@ a.button:hover {
 
 }
 
+
+        .error {
+            color: red;
+        }

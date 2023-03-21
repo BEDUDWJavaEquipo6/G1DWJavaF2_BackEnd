@@ -1,4 +1,4 @@
-## Postwork Sesión 7: Integración de Thymeleaf y Spring Boot
+### Postwork Sesión 7: Integración de Thymeleaf y Spring Boot
 
 ### OBJETIVO
 
@@ -249,7 +249,17 @@ Ahora ejecuta la aplicación y desde postman envía peticiónes la URL base es: 
 
 
 <br>
-
+**Capturas de ingreso de registros y guardado de datos**
+![img.png](images%2Fimg.png)
+![img_1.png](images%2Fimg_1.png)
+![img_2.png](images%2Fimg_2.png)
+![img_3.png](images%2Fimg_3.png)
+![img_4.png](images%2Fimg_4.png)
+![img_5.png](images%2Fimg_5.png)
+<br>
+**Listado y formateo de telefono en orden alfabetico**
+![img_6.png](images%2Fimg_6.png)
+<br>
 [**`Siguiente`** -> sesión 08](../../Sesion-08/)
 
 [**`Regresar`**](../)

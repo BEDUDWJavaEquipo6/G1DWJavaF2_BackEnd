@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="estilos.css">
+<!--<link rel="stylesheet" href="templates/style.css">-->
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -72,7 +72,14 @@ h1 {
   padding-top: 10px;
   margin-bottom: 10px;
 }
-
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+  color: #4c4c4c;
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
 html{
   background-color: #ffffff;
 }
@@ -233,6 +240,7 @@ a.button:hover {
 <body>
 <div class="testbox">
   <h1>Formulario</h1>
+  <h2>Equipo 6</h2>
 <form th:action="@{/registro}" th:object="${persona}" method="post">
   <div>
     <label id="icon" for="id"><i class="icon-key"></i></label>
