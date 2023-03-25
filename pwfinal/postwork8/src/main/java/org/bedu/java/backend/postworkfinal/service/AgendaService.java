@@ -13,7 +13,6 @@ import java.util.Set;
 
 @Service
 public class AgendaService {
-
     private final ValidadorTelefono validadorTelefono;
     private final PersonaRepository personaRepository;
 
@@ -24,13 +23,22 @@ public class AgendaService {
     }
 
     public Persona guardaPersona(Persona persona) {
-        String telefono = validadorTelefono.limpiaNumero(persona.getTelefono());
-        persona.setTelefono(telefono);
-        return this.personaRepository.save(persona);
+
+        if(validadorTelefono.Valida(persona.getTelefono())){
+            System.out.println("Obj Persona capturado: "+persona);
+            persona.setTelefono(ValidadorTelefono.Comprueba(persona.getTelefono()));
+            System.out.println("Ejecutando limpieza del teléfono metodo Comprueba(): "+persona.getTelefono());
+            persona.setTelefono(ValidadorTelefono.formatear(persona.getTelefono()));
+            System.out.println("Dando formato al teléfono con metodo formatear(): "+persona.getTelefono());
+            return personaRepository.save(persona);
+        }else {
+            System.out.println("Telefono no valido");}
+        //persona.setTelefono(ValidadorTelefono.formatear(persona.getTelefono()));
+        return personaRepository.save(persona);
     }
 
     public List<Persona> getPersonas() {
-        return this.personaRepository.findAll(Sort.by("nombre"));
+        return personaRepository.findAll(Sort.by("nombre"));
         /*List<Persona> personaDB = personaRepository.findAll(Sort.by("nombre"));
         return personaDB;*/
     }
