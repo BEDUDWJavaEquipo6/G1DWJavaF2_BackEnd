@@ -33,8 +33,11 @@ public class AgendaService {
             return personaRepository.save(persona);
         }else {
             System.out.println("Telefono no valido");}
-        //persona.setTelefono(ValidadorTelefono.formatear(persona.getTelefono()));
-        return personaRepository.save(persona);
+
+
+        //persona.setTelefono(ValidadorTelefono.formatear(ValidadorTelefono.Comprueba(persona.getTelefono())));
+        return persona;
+
     }
 
     public List<Persona> getPersonas() {
