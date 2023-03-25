@@ -22,5 +22,5 @@ Equipo 6
 * [4: Aplicación de línea de comandos](postwork4/)
 * [5: Inversión de Control (IoC) en Spring Boot](postwork5/)
 * [6: Introducción a Spring MVC](postwork6)
-* ~~7: Integración de Thymeleaf y Spring Boot~~
-* ~~8: Conexión a base de datos con Spring Data~~
+* [7: Integración de Thymeleaf y Spring Boot](postwork7)
+* [8: Conexión a base de datos con Spring Data](postwork8)
