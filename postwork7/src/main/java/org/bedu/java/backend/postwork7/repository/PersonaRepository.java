@@ -18,6 +18,7 @@ import org.bedu.java.backend.postwork7.model.Persona;
 import org.springframework.stereotype.Repository;
 //Librerias postwork5 REst API - Uso de Set as list PErsona
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 @Repository
 public class PersonaRepository{
@@ -30,7 +31,7 @@ public class PersonaRepository{
 
 I would use a TreeSet which is a SortedSet. You need to define your custom class as Comparable based on the name and your collection will always be sorted.
      */
-    private static Set<Persona> phoneBook = new TreeSet<>();
+    private static SortedSet<Persona> phoneBook = new TreeSet<>();
 
     /**
      * Metodo que agrega persona al PhoneBook

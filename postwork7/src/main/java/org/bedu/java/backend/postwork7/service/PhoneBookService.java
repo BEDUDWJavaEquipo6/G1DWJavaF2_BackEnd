@@ -20,7 +20,7 @@ public class PhoneBookService {
         this.personaRepository = personaRepository;
     }
     public Persona addPersona(Persona persona){
-        if(validaService.Valida(persona.getTelefono())){
+       /* if(validaService.Valida(persona.getTelefono())){
             System.out.println("Obj Persona capturado: "+persona);
             persona.setTelefono(ValidaService.Comprueba(persona.getTelefono()));
             System.out.println("Ejecutando limpieza del teléfono metodo Comprueba(): "+persona.getTelefono());
@@ -31,8 +31,10 @@ public class PhoneBookService {
             System.out.println("Telefono no valido");
             // AQUI VA UNA LINEA DE ERROR no se cual pero algo
             return persona ;
-        }
+        }*/
 
+        persona.setTelefono(ValidaService.formatear(persona.getTelefono()));
+        return personaRepository.addPersona(persona);
     }
     public Set<Persona> readListaPhoneBook(){
         return personaRepository.readListaPhoneBook();

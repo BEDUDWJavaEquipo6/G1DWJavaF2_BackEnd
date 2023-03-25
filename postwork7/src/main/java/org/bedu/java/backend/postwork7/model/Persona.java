@@ -1,15 +1,16 @@
 package org.bedu.java.backend.postwork7.model;
 
-//Librerias para postwork7 Validation Thymeleaf
-//import jakarta.validation.constraints.*;
-//import javax.validation.constraints.*;
-//import javax.validation.constraints.NotBlank;
-//import javax.validation.constraints.Pattern;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 public class Persona  implements Comparable<Persona> {
-    //@NotBlank
+    @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
+    @NotBlank(message = "El apellido es obligatorio")
     private String apellido;
+    @Positive(message = "valores mayor a 0")
     private int edad;
     /*
     //@Email(regexp =".+@.+\\..+",message = "El correo electrónico tiene un formato incorrecto.")
@@ -18,8 +19,9 @@ public class Persona  implements Comparable<Persona> {
     private String direccion;
     */
     //@NotBlank
+    @NotBlank(message = "Campo obligatorio")
     private String id;
-    //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
+    @Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
     private String telefono;
 
 
@@ -78,9 +80,12 @@ public class Persona  implements Comparable<Persona> {
         this.telefono = telefono;
     }
 
+    public Persona(){
+
+    }
+
 
     public Persona(String id,String nombre, String apellido, int edad, String telefono) {
-        super();
         this.id=id;
         this.nombre = nombre;
         this.apellido = apellido;
