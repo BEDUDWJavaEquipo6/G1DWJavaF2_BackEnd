@@ -60,7 +60,6 @@ public class Persona implements Comparable<Persona>{
 
         }
 
-
         public Persona(Long id,String nombre, String apellido, int edad, String telefono) {
                 this.id=id;
                 this.nombre = nombre;

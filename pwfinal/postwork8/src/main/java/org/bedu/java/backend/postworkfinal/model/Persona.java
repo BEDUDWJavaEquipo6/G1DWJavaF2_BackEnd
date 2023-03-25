@@ -11,19 +11,27 @@ public class Persona implements Comparable<Persona> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false, length = 100)
     @NotBlank(message = "Campo obligatorio")
     private String nombre;
+    @Column(nullable = false, length = 100)
+    private String apellido;
+    @Column(nullable = false, length = 15, unique = true)
     @NotBlank(message = "campo obligatorio")
     @Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
     private String telefono;
 
+    private int edad;
+
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String telefono) {
+    public Persona(Long id,String nombre, String apellido, int edad, String telefono) {
+        this.id=id;
         this.nombre = nombre;
+        this.apellido = apellido;
         this.telefono = telefono;
-        this.id = id;
+        this.edad = edad;
     }
 
     public Long getId() {
@@ -42,6 +50,14 @@ public class Persona implements Comparable<Persona> {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     public String getTelefono() {
         return telefono;
     }
@@ -50,13 +66,40 @@ public class Persona implements Comparable<Persona> {
         this.telefono = telefono;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
-                '}';
+    public int getEdad() {
+        return edad;
     }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString(){
+        return "Persona [Id: " + id + ", nombre: " + nombre + ", apellido: " + apellido
+                +  ", telefono: " + telefono  + ", edad: " + edad  + "]";
+        /*
+                + ", email: " + email + ", telefono: " + telefono + ", direccio: " + direccion
+                + ", id: " + id + "]";
+         */
+    }
+
+   /* @Override
+    public int Persona compareTo(Persona p){
+        //Comparar dos obj Persona por campops nombre y apellido o será objeto completo..perguntar equipo y Expert
+            if(this.apellido==p.apellido)
+                return 0;
+            else if(this.apellido>p.apellido)
+                return 1;
+            else
+                return -1;
+        this.persona
+    }
+    @Override
+    public String (){
+        //Comparar dos obj Persona
+    }*/
+
 
     @Override
     public boolean equals(Object o) {
