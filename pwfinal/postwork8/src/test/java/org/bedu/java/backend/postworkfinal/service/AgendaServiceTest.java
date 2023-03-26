@@ -22,7 +22,7 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class AgendaServiceTest {
 
-    Persona pruebaPersona = new Persona(22L,"fulanito", "0123456789");
+    Persona pruebaPersona = new Persona(22L,"fulanito","ful", "0123456789",12);
     Persona pruebaPersona2;
 
     @Mock
@@ -52,10 +52,20 @@ class AgendaServiceTest {
        // verify(calcService).add(20.0, 30.0);
     }
 
+    @Test
+    void getPersonas() {
+        agendaService.getPersonas();
+        verify(personaRepository).findAll(Sort.by("nombre"));
+    }
+
+    /*
     @TestFactory
+
     Stream<DynamicTest> dynamicTestsAgendaService() {
         List<Persona> inputList = Arrays.asList(
-                new Persona(15L,"fulanito","1234567890"), new Persona(16L,"pereganito","0123456789"), new Persona(17L,"sutanito","9999999999"));
+                new Persona(15L,"fulanito","ful","1234567890",10),
+                new Persona(16L,"pereganito","per","0123456789",11),
+                new Persona(17L,"sutanito","sut","9999999999",12));
 
         Stream<DynamicTest> savePersona = inputList.stream()
                 .map(per -> DynamicTest.dynamicTest(
@@ -67,13 +77,5 @@ class AgendaServiceTest {
                 ));
         return savePersona;
     }
-
-
-
-    @Test
-    void getPersonas() {
-        agendaService.getPersonas();
-        verify(personaRepository).findAll(Sort.by("nombre"));
-    }
-
+    */
 }

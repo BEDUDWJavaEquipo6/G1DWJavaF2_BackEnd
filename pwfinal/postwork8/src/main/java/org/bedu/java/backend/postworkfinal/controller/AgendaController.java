@@ -1,15 +1,18 @@
 package org.bedu.java.backend.postworkfinal.controller;
 
-
+//Nuestras librerias
+import org.bedu.java.backend.postworkfinal.model.Persona;
 import org.bedu.java.backend.postworkfinal.service.AgendaService;
+//Librerias para postwork6 RestAPI
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+//Librerias para portwotk7 thymeleaf
+import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
-import org.bedu.java.backend.postworkfinal.model.Persona;
-
 
 import javax.validation.Valid;
 
@@ -41,17 +44,16 @@ public class AgendaController {
         String vistaResultado = "registroExitoso";
 
         if(errors.hasErrors()){
-            System.out.println("hay errores");
+            //System.out.println("hay errores");
             vistaResultado = "index";
-            System.out.println("hace la vista");
+            //System.out.println("hace la vista");
         }
-        //agendaService.guardaPersona(persona);
-        //System.out.println("guarda");
+
 
         ModelAndView mav = new ModelAndView(vistaResultado);
-        System.out.println("crea el model and view");
+        //System.out.println("crea el model and view");
         mav.addObject("persona", agendaService.guardaPersona(persona));
-        System.out.println("crea el obketo");
+        //System.out.println("crea el obketo");
         return mav;
     }
 

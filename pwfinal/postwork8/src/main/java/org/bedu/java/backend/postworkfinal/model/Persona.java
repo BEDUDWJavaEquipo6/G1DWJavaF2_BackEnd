@@ -2,8 +2,9 @@ package org.bedu.java.backend.postworkfinal.model;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 import java.util.Objects;
 @Entity
 @Table(name = "persona")
@@ -11,22 +12,27 @@ public class Persona implements Comparable<Persona> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotEmpty(message = "El nombre es obligatorio")
     @Column(nullable = false, length = 100)
-    @NotBlank(message = "Campo obligatorio")
     private String nombre;
+
+    @NotEmpty(message = "El apellido es obligatorio")
     @Column(nullable = false, length = 100)
     private String apellido;
-    @Column(nullable = false, length = 15, unique = true)
-    @NotBlank(message = "campo obligatorio")
-    @Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
-    private String telefono;
 
+    @NotEmpty(message = "campo obligatorio")
+    //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
+    @Pattern(regexp = "^(\\(\\d{2}\\)[- .]?\\d{4}[- .]?\\d{4})|(\\d{3})[-.s](\\d{3})[-.s](\\d{4})|(\\d{2})[-.s](\\d{4})[-.s](\\d{4})$", message = "El teléfono debe tener un formato de ##-####-####")
+    @Column(nullable = false, length = 15) //unique = true)
+    private String telefono;
+    @Positive(message = "valores mayor a 0")
     private int edad;
 
     public Persona() {
     }
 
-    public Persona(Long id,String nombre, String apellido, int edad, String telefono) {
+    public Persona(Long id,String nombre, String apellido,  String telefono,int edad) {
         this.id=id;
         this.nombre = nombre;
         this.apellido = apellido;
