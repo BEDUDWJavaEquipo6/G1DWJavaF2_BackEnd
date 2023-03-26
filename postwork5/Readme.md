@@ -36,7 +36,7 @@ En caso de introducir un teléfono con un formato no permitido por la aplicació
 * Ejecutando postwork5 con teléfono con formato no válido
 ![Ejecutando postwork5-Teléfono no valido](images/NotValidPhone.png)
 
-5. En caso de obtener un error con el formato, regresar al paso 3 e introducir un nuevo teléfono- 
+5. En caso de obtener un error con el formato, regresar al paso 3 e introducir un nuevo teléfono. 
 
 [**`Siguiente`** -> postwork](../postwork6/)
 

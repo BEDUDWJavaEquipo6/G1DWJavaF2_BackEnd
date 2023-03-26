@@ -24,6 +24,7 @@
    gradle test
    ```
 ***Ejecutando postwork3 con código hecho por el equipo***
+
 ![Ejecutando postwork3](images/pruebas.png) 
 
 5. Observa los resultados obtenidos en las pruebas.
