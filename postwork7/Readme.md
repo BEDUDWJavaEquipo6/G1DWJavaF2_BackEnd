@@ -48,12 +48,17 @@ Nota: los valores introducidos deben ser válidos, de lo contrario el formulario
 
 
 6. Recibirás un mensaje de confirmación de registro.
+
 ![img_1.png](images%2Fimg_1.png)
 
-7. Ingresa diferentes usuarios para conformar una pequeña agenda telefónica. Esto se realiza mediante la selección de la opción **Ingresar otro** 
+7. Ingresa diferentes usuarios para conformar una pequeña agenda telefónica. Esto se realiza mediante la selección de la opción **Ingresar otro**
+
 ![img_2.png](images%2Fimg_2.png)
+
 ![img_3.png](images%2Fimg_3.png)
+
 ![img_4.png](images%2Fimg_4.png)
+
 ![img_5.png](images%2Fimg_5.png)
 <br>
 
