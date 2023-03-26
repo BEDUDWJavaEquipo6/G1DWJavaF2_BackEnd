@@ -2,7 +2,7 @@ package org.bedu.java.backend.postworkfinal.model;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 import java.util.Objects;
@@ -13,15 +13,15 @@ public class Persona implements Comparable<Persona> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "El nombre es obligatorio")
+    @NotEmpty(message = "El nombre es obligatorio")
     @Column(nullable = false, length = 100)
     private String nombre;
 
-    @NotBlank(message = "El apellido es obligatorio")
+    @NotEmpty(message = "El apellido es obligatorio")
     @Column(nullable = false, length = 100)
     private String apellido;
 
-    @NotBlank(message = "campo obligatorio")
+    @NotEmpty(message = "campo obligatorio")
     //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
     @Pattern(regexp = "^(\\(\\d{2}\\)[- .]?\\d{4}[- .]?\\d{4})|(\\d{3})[-.s](\\d{3})[-.s](\\d{4})|(\\d{2})[-.s](\\d{4})[-.s](\\d{4})$", message = "El teléfono debe tener un formato de ##-####-####")
     @Column(nullable = false, length = 15) //unique = true)
