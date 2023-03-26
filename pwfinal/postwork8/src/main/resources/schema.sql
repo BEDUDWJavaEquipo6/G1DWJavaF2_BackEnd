@@ -1,6 +1,6 @@
 --Enabled during heavy testing of the webService,
 --this allow to avoid droping  tables at the workbench.
---drop table `persona`;
+drop table `persona`;
 CREATE TABLE IF NOT EXISTS `persona` (
     `id` bigint       NOT NULL AUTO_INCREMENT,
     `nombre`   varchar(100) NOT NULL,
