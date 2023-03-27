@@ -8,8 +8,6 @@ Equipo 6
 ### Integrantes:
 
 * Melina Molina
-* Roxana Hernández
-* José Puente
 * Rodrigo Aguilar
 * José Angel Córdoba
 * Francisco Gómez 
