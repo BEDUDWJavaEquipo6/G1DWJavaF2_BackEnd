@@ -22,7 +22,7 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class AgendaServiceTest {
 
-    Persona pruebaPersona = new Persona(22L,"fulanito","ful", "0123456789",12);
+    Persona pruebaPersona = new Persona(220L,"test","testing", "9876543210",12);
     Persona pruebaPersona2;
 
     @Mock

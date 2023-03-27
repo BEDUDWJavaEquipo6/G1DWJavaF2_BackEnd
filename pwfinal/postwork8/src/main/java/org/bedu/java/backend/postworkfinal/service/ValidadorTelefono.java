@@ -7,8 +7,12 @@ import java.util.regex.Pattern;
 public class ValidadorTelefono {
 
     public boolean Valida(String telefono) {
-        return //Pattern.compile("^[1-9]\\d{2} \\d{3} \\d{4}").matcher(telefono).matches()||
+        return Pattern.compile("^(\\(\\d{2}\\)[-\\s]?\\d{4}[-\\s]?\\d{4})|(\\d{3})[-\\s](\\d{3})[-\\s](\\d{4})|(\\d{2})[-\\s](\\d{4})[-\\s](\\d{4})|(\\d{10})").matcher(telefono).matches();
+
+                /*
+                Pattern.compile("^[1-9]\\d{2} \\d{3} \\d{4}").matcher(telefono).matches()||
                 Pattern.compile("^[1-9]\\d{2}-\\d{3}-\\d{4}").matcher(telefono).matches();
+                */
     }
 
     public static String Comprueba(String telefono) {

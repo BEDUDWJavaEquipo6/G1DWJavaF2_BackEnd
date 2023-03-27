@@ -23,7 +23,8 @@ public class Persona implements Comparable<Persona> {
 
     @NotEmpty(message = "El teléfono es obligatorio")
     //@Pattern(regexp = "^(\\d{2,4}[- .]?){2}\\d{4}$", message = "El teléfono debe tener un formato de ##-####-####")
-    @Pattern(regexp = "^(\\(\\d{2}\\)[- .]?\\d{4}[- .]?\\d{4})|(\\d{3})[-.s](\\d{3})[-.s](\\d{4})|(\\d{2})[-.s](\\d{4})[-.s](\\d{4})$", message = "El teléfono debe tener un formato de ###-###-####")
+    //@Pattern(regexp = "^(\\(\\d{2}\\)[- .]?\\d{4}[- .]?\\d{4})|(\\d{3})[-.s](\\d{3})[-.s](\\d{4})|(\\d{2})[-.s](\\d{4})[-.s](\\d{4})$", message = "El teléfono debe tener un formato de ###-###-####")
+    @Pattern(regexp = "^(\\(\\d{2}\\)[-\\s]?\\d{4}[-\\s]?\\d{4})|(\\d{3})[-\\s](\\d{3})[-\\s](\\d{4})|(\\d{2})[-\\s](\\d{4})[-\\s](\\d{4})|(\\d{10})$", message = "El teléfono debe tener un formato de ###-###-####")
     @Column(nullable = false, length = 15) //unique = true)
     private String telefono;
     @Positive(message = "Usar valores mayor > 0")
