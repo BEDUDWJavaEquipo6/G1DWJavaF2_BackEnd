@@ -36,7 +36,7 @@ public class AgendaService {
 
 
         //persona.setTelefono(ValidadorTelefono.formatear(ValidadorTelefono.Comprueba(persona.getTelefono())));
-        //return persona;
+        return persona;
 
     }
 
