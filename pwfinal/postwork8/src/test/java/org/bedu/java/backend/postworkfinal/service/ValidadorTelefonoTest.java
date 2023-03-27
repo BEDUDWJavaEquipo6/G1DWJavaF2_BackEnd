@@ -19,7 +19,7 @@ class ValidadorTelefonoTest {
     @DisplayName("Prueba para dejar solo números")
     void limpiaNumero() {
         String esperado = "9999999999";
-        assertEquals(esperado, validadorTelefono.limpiaNumero("99-9999-9999"));
+        assertEquals(esperado, validadorTelefono.Comprueba("99-9999-9999"));
     }
 
     @TestFactory
@@ -33,7 +33,7 @@ class ValidadorTelefonoTest {
                 .map(tel -> DynamicTest.dynamicTest("Telefonos: " + tel,
                         () -> {int id = variosTelefonos.indexOf(tel);
 
-                            assertEquals(esperado, validadorTelefono.limpiaNumero(tel));
+                            assertEquals(esperado, validadorTelefono.Comprueba(tel));
                         }));
     }
 }
