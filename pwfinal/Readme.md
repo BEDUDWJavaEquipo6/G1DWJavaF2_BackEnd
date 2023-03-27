@@ -1,4 +1,4 @@
-## Postwork Sesión 8: Conexión a base de datos con Spring Data
+## Proyecto Postwork
 
 ### OBJETIVO
 
@@ -36,4 +36,4 @@ En esta ocasión tu misión será extender este programa eliminando el `Set` en 
 
 </br>
 
-[**`Regresar`**](../)
+[**`Regresar`**](../../)
