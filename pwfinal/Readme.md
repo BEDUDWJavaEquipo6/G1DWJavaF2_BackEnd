@@ -6,7 +6,6 @@
 - Recuperar las personas contenidas en la agenda desde la base de datos para mostrarlas en pantalla.
 - Que la información ingresada no desaparezca al momento de reiniciar la aplicación.
 
-
 ### DESARROLLO
 
 1. Integración de  Spring Data JPA en un proyecto Spring Boot.
